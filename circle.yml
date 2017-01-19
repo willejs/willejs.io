@@ -1,4 +1,6 @@
 machine:
+  services:
+    - docker
   environment:
     CIRCLE_BUILD_DIR: $HOME/$CIRCLE_PROJECT_REPONAME
     PATH: $PATH:$CIRCLE_BUILD_DIR/bin
@@ -11,8 +13,16 @@ dependencies:
     - bash ./ci/install-themes.sh
   cache_directories:
     - bin
+  override:
+    - docker build --rm=false -t willejs/willejs.io:latest .
 
 test:
   override:
     - hugo --theme=hugo-theme-bleak
 
+deploy:
+  hub:
+    branch: master
+    commands:
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker push willejs/willejs.io -t latest

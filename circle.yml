@@ -13,8 +13,6 @@ dependencies:
     - bash ./ci/install-themes.sh
   cache_directories:
     - bin
-  override:
-    - docker build --rm=false -t willejs/willejs.io:latest .
 
 test:
   override:
@@ -24,5 +22,6 @@ deployment:
   hub:
     branch: master
     commands:
+      - docker build --rm=false -t willejs/willejs.io:latest .
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
       - docker push willejs/willejs.io -t latest

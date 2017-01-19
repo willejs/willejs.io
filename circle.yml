@@ -8,7 +8,7 @@ machine:
 dependencies:
   pre:
     - bash ./ci/install-hugo.sh
-    - bash ./cl/install-themes.sh
+    - bash ./ci/install-themes.sh
   cache_directories:
     - bin
 

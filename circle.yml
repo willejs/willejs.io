@@ -20,7 +20,7 @@ test:
   override:
     - hugo --theme=hugo-theme-bleak
 
-deploy:
+deployment:
   hub:
     branch: master
     commands:

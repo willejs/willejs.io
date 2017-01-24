@@ -2,15 +2,43 @@ baseurl = "https://willejs.io/"
 languageCode = "en-us"
 title = "Will Salt"
 googleAnalytics = "UA-90822507-1"
+theme = "hugo-strata-theme"
+paginate = 10
 
 [params]
-  # To provide some metadata for search engines feel free to add a few
-    # information about you and your website.
   name = "Will Salt"
   description = "About Will Salt"
+  date_format = "02-01-2006"
+
+  [params.about]
+    hide  = false
+    title = "Check out the blog posts to see how this site is deployed and the infrastructure it runs on"
 
   [params.sidebar]
     avatar = "avatar.jpg"
-    bio = "UNDER CONSTRUCTION"
+    bio = "I am a DevOps engineer and team lead<br> interested in building infrastructure as code,<br> systems, processes and teams."
     github = "willejs"
     linkedin = "https://www.linkedin.com/in/william-salt-7bb00819/"
+
+  [params.contact]
+    hide  = false
+    title = "Get In Touch"
+    email = "williamejsalt@gmail.com"
+    [params.contact.form]
+      name = "Name"
+      email = "Email"
+      message = "Message"
+      submit = "Send message"
+  [params.portfolio]
+    hide = true
+
+# Menu links that appear on the left sidebar
+[[menu.main]]
+  name = "Home"
+  url  = "/"
+  weight = 0
+
+[[menu.main]]
+  name = "Blog"
+  url  = "post/"
+  weight = 10

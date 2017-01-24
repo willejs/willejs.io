@@ -16,7 +16,7 @@ dependencies:
 
 test:
   override:
-    - hugo --theme=hugo-theme-bleak
+    - hugo --theme=hugo-strata-theme
 
 deployment:
   hub:

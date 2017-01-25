@@ -19,16 +19,13 @@ paginate = 10
     bio = "I am a DevOps engineer and team lead<br> interested in building infrastructure as code,<br> systems, processes and teams."
     github = "willejs"
     linkedin = "https://www.linkedin.com/in/william-salt-7bb00819/"
+    email = "williamejsalt@gmail.com"
 
   [params.contact]
     hide  = false
     title = "Get In Touch"
     email = "williamejsalt@gmail.com"
-    [params.contact.form]
-      name = "Name"
-      email = "Email"
-      message = "Message"
-      submit = "Send message"
+    noEmailForm = true
   [params.portfolio]
     hide = true
 
